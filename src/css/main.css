@@ -496,10 +496,34 @@ margin-right:14px;
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1200px) {
   .message {
-    width: 100%;
+    background: #827d4d;
+  padding: 10px;
+  border-radius: 0.5em;
+  width: 880px;
+  float: right;
+  margin-left:155px;
+  box-shadow: #000 2px 2px 4px, inset #734c03 2px 2px 4px;
+  transition: all 0.3s;
+  display:inline-block;
+  margin-top:5px;
+  margin-bottom:18px;
+  border:1px solid #000;
+  color:#000;
+   font-weight:bold;
   }
+    .message.send {
+  float: left;
+  background-color: #94adad;
+  margin-left:100px;
+  box-shadow: #000 2px 2px 4px, inset #2f3f3c 2px 2px 4px;
+  width: 880px;
+  border-radius: 0.5em;
+  margin-top:5px;
+  margin-right:0px;
+  border:1px solid #fff;
+}
 }
 
 @keyframes shine {
