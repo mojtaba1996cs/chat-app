@@ -112,7 +112,7 @@ Array.prototype.slice.call(con.childNodes).reverse().forEach(function(e) {
 });*/
   });
   }catch (error) {
-   var err = "لا توجد رسائل ";
+   var err = "";
     document.querySelector('.message-container').innerHTML+= err;
   }
 });
