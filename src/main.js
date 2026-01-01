@@ -68,7 +68,7 @@ db.ref("/messages").on("value", function (data4) {
   if (messagesnumber2 == 0){
     hideLoader();
   audio.play();
-    var err = `<div class="error">لاتوجد رسائل </div>`;
+    //var err = `<div class="error">لاتوجد رسائل </div>`;
     document.querySelector('.message-container').innerHTML+= err;
   }
   });
