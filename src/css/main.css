@@ -156,7 +156,7 @@ nav i {
 
 }
 }
-@media (min-width: 768px)  {
+@media (min-width: 650px)  {
 .message {
   background: red;
   padding: 10px;
