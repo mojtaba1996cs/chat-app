@@ -134,14 +134,14 @@ nav i {
    font-weight:bold;
 }
 
-   /* @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: 1200px) {
   .message{
     width: 3170px;
   }
   .info {
     width:100%
   }
-}*/
+}
 .message:hover {
   transform: scale(1.08) !important;
 }
