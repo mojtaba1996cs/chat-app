@@ -117,7 +117,7 @@ nav i {
 }
 @media (max-width: 650.98px) {
 .message {
-  background: red;
+  background: #ff0;
   padding: 10px;
   border-radius: 0.5em;
   width: 280px;
