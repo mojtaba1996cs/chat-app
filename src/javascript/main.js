@@ -134,8 +134,7 @@ const message = `<div class="meg"><div class="message ${type}"><p class="usernam
 
    document.querySelector('.message-container').innerHTML += message;
   }catch (error) {
-   var err = "لا توجد رسائل ";
-    document.querySelector('.message-container').innerHTML+= err;
+//  var err = "لا توجد رسائل ";//document.querySelector('.message-container').innerHTML+= err;
   }
 });
 
