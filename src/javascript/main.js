@@ -12,7 +12,7 @@ var ip='1';
 var caseuser = ' ';
 var iduser =1;
 var timezone = "Africa/Khartoum";
-/*$.ajax({
+$.ajax({
   url: "https://ipinfo.io/json",
   type: 'GET',
   dataType: 'json',
@@ -21,7 +21,7 @@ var timezone = "Africa/Khartoum";
     ip= res.ip;
     timezone = res.timezone;
   }
-});*/
+});
 function json(url) {
   return fetch(url).then(res => res.json());
 }
@@ -134,7 +134,8 @@ const message = `<div class="meg"><div class="message ${type}"><p class="usernam
 
    document.querySelector('.message-container').innerHTML += message;
   }catch (error) {
-//  var err = "لا توجد رسائل ";//document.querySelector('.message-container').innerHTML+= err;
+  // var err = "لا توجد رسائل ";
+   // document.querySelector('.message-container').innerHTML+= err;
   }
 });
 
