@@ -28,12 +28,12 @@
   <meta property="twitter:image" content="./screenshot/screenshot_pc.png">
   <meta name="theme-color" content="#ea9c1d"/>
   <link rel="shortcut icon" href="src/images/icon.png"/>
- <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">!-->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./src/css/font-awesome.min.css">
   <link rel="stylesheet" href="./src/css/normalize.css">
   <link rel="stylesheet" href="./src/css/aos.min.css">
@@ -101,11 +101,11 @@ $('.image-preview-single').each(function() {
       <div id="registration-page">
           <h3>تعديل الصورة الشخصية</h3>
 <form id="updateuser">
- <!--  <p>الاسم</p>
+  <p>الاسم</p>
     <input type="text" id="registration-username">
 <br/>
        <p>   كلمة المرور </p>
-  <input type="text" id="registration-password">-->
+  <input type="text" id="registration-password">
  <center>
    <img id="image" width="200px" height="200px" style="border-radius:10px;margin-left:22px"/>
 
@@ -195,6 +195,7 @@ $('.image-preview-single').each(function() {
 </p>
 <br>
 </div>
+<div> 
 <button onclick="window.location.href = 'https://github.com/mojtaba1996cs/chat-app'" id="sors">عرض المصدر</button>
 
       <div class="container">
@@ -213,10 +214,13 @@ $('.image-preview-single').each(function() {
         </div>
 
       </div>
-
+</div> 
       <br><br>
 </section>
-
+<div id="specs"><br> <br><br><br><br> 
+</div> 
+<div id="specs2"><br> <br><br><br><br> 
+</div>
     <section id="chat">
 
       <!-- messages will display here -->
@@ -231,12 +235,16 @@ $('.image-preview-single').each(function() {
         </div> -->
 
       </div>
-
+<div id="specs"><br> <br><br><br><br> 
+</div> 
+<div id="specs2"><br> <br><br><br><br> 
+</div>
 
       <!-- form to send message -->
       <form id="message-form" dir="rtl">
         <input id="message-input" type="text" placeholder="اكتب رسالتك" maxlength="350" required />
-        <button id="message-btn" type="submit">ارسال</button>
+         <button type="submit" class="btn btn-primary" id="message-btn">
+      <i class="fa fa-paper-plane"></i>  </button>
       </form>
 
     </section>
