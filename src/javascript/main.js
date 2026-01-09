@@ -79,13 +79,17 @@ db.ref("messgcounter/"+username+"/messgcounter").transaction(
 document.getElementById("updateuser").addEventListener("submit", updateuser);
 function updateuser() {
   var image = $('#profile-img').val();
- var insert = db.ref("infouser/"+username).update({
+  var password = $('#registration-password').val();
+  var username = $('#registration-username').val();
+ var update2 = db.ref("infouser/"+username).update({
+  username:username,
+  password:password,
   image,
   })
-if(insert){
+if(update2){
   Swal.fire({
 title: '<strong>💫💫تهانينا</strong>',
-html: '<div class="html" dir="rtl">تم تغيير الصورة الشخصية</div>',
+html: '<div class="html" dir="rtl">تم تحديث البيانات </div>',
 icon: "success",
 confirmButtonText:'موافق',
 background:'orange',
@@ -211,7 +215,7 @@ var profile = `<div class='profile2'><img src='./src/images/user.png'></div>`;
     $("#caseuser").html(caseuser);
   }else{
     var caseuser = "غير مسجل";
-    var dis='<p>يمكنك<button onclick="tosin()" id="btnCustom2">انشاء حساب</button>في هذا التطبيق</p>';
+    var dis='<p>يمكنك<button onclick="tosin()" id="reg">انشاء حساب</button>في هذا التطبيق</p>';
     $("#dis").html(dis);
     $("#caseuser").html(caseuser);
   }
@@ -466,7 +470,6 @@ closeOnClickOutside: false,
 });
 }});
 }
-if(Cookies.get('username3')){
 db.ref("infouser/"+username).once("value" , (snapshot3) => {
         var State = snapshot3.val().log;
         var lastentry = snapshot3.val().lastime;
@@ -504,7 +507,7 @@ var image2 = `<img src="${image}" alt="profile">`;
    }
   let country2 = countryFlags[country].name;
     let Emoji = countryFlags[country].emoji;
-  const infuser = `<div class="home-img-4">${image2}</div><div class='State2'>${State2}<div id="update"><i class="fa fa-edit"  onclick="update()"></i></div></div>
+  const infuser = `<div class="home-img-4">${image2}</div><div class='State2'>${State2}</div><div id="update"><i class="fa fa-edit"  onclick="update()"></i></div>
 <br><table id="table_ad2"><tr id="tr-ad2"><td id="td-ad2">الاسم </td><td id="td-ad2">${username}</td></tr><tr id="tr-ad2"><td id="td-ad2">البلد</td><td id="td-ad2">${country2+" "+Emoji}</td></tr><tr id="tr-ad2"><td id="td-ad2">تاريخ انشاء الحساب </td><td id="td-ad2">${TimeLogin}</td></tr></table>`;
 
 document.querySelector('.myinfo2').innerHTML += infuser;
@@ -516,7 +519,6 @@ $('#registration-password').attr('value', `${password}`);
     $("#image").attr('src',`${noimage}`);
   }
 });});});
-}
 
 db.ref("messgcounter/"+username).on("value", (snapshot2) => {
   try{
@@ -610,7 +612,7 @@ myInfo = () => {
     gsap.to('nav div', {
       ease: 'bounce',
       color: 'lime',
-      rotate: 5,
+      rotate: 2,
       duration: 1.5
     });
   }
